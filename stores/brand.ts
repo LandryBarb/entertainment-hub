@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia';
+import { useNuxtApp } from 'nuxt/app';
+import { $fetch } from 'ofetch';
 
 export interface Brand {
   id: string;
@@ -22,6 +24,7 @@ export const useBrandStore = defineStore('brand', {
     async fetchBrands() {
       this.loading = true;
       try {
+        // const { $fetch } = useNuxtApp();
         const data = await $fetch<Brand[]>('/api/brands');
         this.brands = data;
       } catch (err: any) {
@@ -34,6 +37,7 @@ export const useBrandStore = defineStore('brand', {
     async fetchBrand(id: string) {
       this.loading = true;
       try {
+        // const { $fetch } = useNuxtApp();
         const data = await $fetch<Brand>(`/api/brands/${id}`);
         this.currentBrand = data;
       } catch (err: any) {
@@ -51,6 +55,7 @@ export const useBrandStore = defineStore('brand', {
     }) {
       this.loading = true;
       try {
+        // const { $fetch } = useNuxtApp();
         const newBrand = await $fetch<Brand>('/api/brands', {
           method: 'POST',
           body: payload,

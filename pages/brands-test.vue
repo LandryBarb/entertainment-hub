@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+import { useBrandStore } from '../stores/brand';
+
 const brandStore = useBrandStore();
 
 onMounted(() => {
