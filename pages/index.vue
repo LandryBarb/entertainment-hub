@@ -7,9 +7,8 @@ const onWatchDemo = () => {
 </script>
 
 <template>
-  <main>
-    <h1>Entertainement Hub</h1>
-
-    <BaseButton label="Watch Demo Reel" @click="onWatchDemo" />
-  </main>
+  <div>
+    <h1>Home Page Loaded</h1>
+    <p>If you see this, Nuxt routing works.</p>
+  </div>
 </template>
