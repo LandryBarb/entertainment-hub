@@ -9,7 +9,7 @@ const onWatchDemo = () => {
 <template>
   <main>
     <h1>Entertainement Hub</h1>
-    <BaseButton />
+
     <BaseButton label="Watch Demo Reel" @click="onWatchDemo" />
   </main>
 </template>
